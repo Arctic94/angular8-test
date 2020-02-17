@@ -1,0 +1,27 @@
+.cuadroForm{
+    display: flex;
+    
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+.cuadroResultado{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-left: 20px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap
+}
+.submit{
+    padding:20px;
+    display: flex;
+    justify-content: center;
+}
+.form{
+    max-width: 100%;
+    width: 100%;
+}

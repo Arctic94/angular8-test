@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div class="content">
+  <div class="cuadroForm">
+  <form [formGroup]="formGroup" class="form">
+
+    <label for="name" class="label">Name</label>
+    <input name="name"
+      class="input"
+      formControlName="name"
+      type="text" 
+      (keyup)="getError('name',false)"
+      />
+      <p *ngIf='!formGroup.controls.name.valid && formGroup.controls.name.touched == true' class="help is-success">Between 3 and 15 characters</p>
+  <br>
+    <label for="email" class="label">E-mail</label>
+    <input name="email"
+      formControlName="email"
+      class="input"
+      type="email" 
+      (keyup)="getError('email',false)"/>
+      <p *ngIf='!formGroup.controls.email.valid && formGroup.controls.email.touched == true' class="help is-danger">Invalid Email</p>
+  <br>
+    <label for="phone" class="label">Phone</label>
+    <input name="phone"
+      formControlName="phone"
+      class="input"
+      type="text"
+      (keyup)="getError('phone',false)" />
+      <p *ngIf='!formGroup.controls.phone.valid && formGroup.controls.phone.touched == true' class="help is-success">Only 9 digits</p>
+  <br>
+    <div class="submit">
+      <button (click)="validate(true)" class="button is-info">Terminar</button>
+    </div>
+  </form>
+  </div>
+  <div class="cuadroResultado" *ngIf="validForm">
+    <div class="field">
+      <label class="label">
+        <h1 class="title is-5">Name</h1>
+        <h2 class="subtitle is-6">{{this.userData?.name}}</h2>
+      </label>
+      <br>
+      <label class="label">
+        <h1 class="title is-5">Email</h1>
+        <h2 class="subtitle is-6">{{this.userData?.email}}</h2>
+      </label>
+      <br>
+      <label class="label">
+        <h1 class="title is-5">Phone</h1>
+        <h2 class="subtitle is-6">{{this.userData?.phone}}</h2>
+      </label>
+      
+      
+    </div>
+    
+
+    
+    
+  </div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,14 @@
+.bg{
+    background-color: indianred;
+}
+.title {
+    animation: fadein 2s;
+}
+@keyframes fadein {
+    from {
+        opacity:0.1;
+    }
+    to {
+        opacity:1;
+    }
+}
